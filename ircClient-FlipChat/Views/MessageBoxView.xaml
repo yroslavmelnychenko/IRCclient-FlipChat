@@ -1,0 +1,64 @@
+﻿<UserControl
+    x:Class="ircClient_FlipChat.Views.MessageBoxView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ircClient_FlipChat.Views"
+    xmlns:chat="using:ircClient_FlipChat.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+      >
+    <UserControl.DataContext>
+        <chat:ChatMessage />
+    </UserControl.DataContext>
+
+    <Grid Background="White">
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="331*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" 
+                      VerticalScrollBarVisibility="Auto"
+                      Name="Scroller"
+                      Grid.RowSpan="2"
+                      ui:Grid.ColumnSpan="3">
+            <TextBlock HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       MinWidth="100"
+                       Width="{Binding ElementName=Scroller, Path=ViewportWidth}"
+                       TextWrapping="Wrap" />
+        </ScrollViewer>
+        <StackPanel Grid.Row="1"
+                    Background="#FFD0D1D1"
+                    Orientation="Vertical"
+                    ui:Grid.ColumnSpan="1">
+            <Border Width="500"
+                    HorizontalAlignment="Left" 
+                    Margin="10" 
+                    BorderThickness="2"
+                    BorderBrush="AliceBlue"
+                    CornerRadius="6"
+                    Padding="4">
+                <RichEditBox  BorderBrush="Transparent"                         
+                              BorderThickness="0"
+                              />
+            </Border>
+            
+        </StackPanel>
+        <Button   Grid.Row="1"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Right"
+                  BorderBrush="Transparent"
+                  Width="40"
+                        Height="30"
+                  >
+            <SymbolIcon Symbol="Send"
+                        ></SymbolIcon>
+        </Button>
+    </Grid>
+
+</UserControl>

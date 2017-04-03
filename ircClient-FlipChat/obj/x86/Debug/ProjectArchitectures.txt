@@ -1,0 +1,1 @@
+C:\Users\y.melnychenko\documents\visual studio 2017\Projects\ircClient-FlipChat\ircClient-FlipChat\ircClient-FlipChat.csproj;x86

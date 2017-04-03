@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="ircClient_FlipChat.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ircClient_FlipChat"
+    xmlns:views="using:ircClient_FlipChat.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >   
+       <Page.TopAppBar>
+            <AppBar>
+                <StackPanel  Orientation="Horizontal">
+                    <AppBarButton Label="Setting" Icon="Setting" ></AppBarButton>
+                </StackPanel>
+            </AppBar>
+        </Page.TopAppBar>
+   
+    <Grid Background="#FF493049" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="378*"/>
+            <ColumnDefinition Width="131*"/>
+        </Grid.ColumnDefinitions>
+        
+            
+        <views:MessageBoxView Grid.Column="1"></views:MessageBoxView>
+
+    </Grid>
+</Page>
